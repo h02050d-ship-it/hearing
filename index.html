@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>ご需要のお伺い｜林材木店</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%237a5230%22/><text x=%2250%22 y=%2272%22 font-size=%2264%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22sans-serif%22>林</text></svg>">
+<style>
+:root{--bg:#f7f5f1;--card:#fff;--fg:#1f1f1f;--muted:#6b6b6b;--line:#ddd6cc;--accent:#7a5230;--accent-bg:#f3ebe2;--ok:#2e7d32;--err:#c62828}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:"Hiragino Sans","Yu Gothic UI","Meiryo",sans-serif;font-size:16px;line-height:1.6}
+.wrap{max-width:560px;margin:0 auto;padding:16px 16px 48px}
+header{padding:8px 0 12px}
+.to{font-size:15px;font-weight:700;min-height:1.6em}
+h1{font-size:20px;line-height:1.45;margin:6px 0 8px}
+.lead{color:var(--muted);font-size:14px;margin:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:14px}
+.card h2{font-size:15px;margin:0 0 10px}
+.prod{font-size:14px;margin:0;padding-left:1.1em}
+.prod li{margin:2px 0}
+.note{font-size:13px;color:var(--muted);margin:8px 0 0}
+.q{font-weight:700;font-size:15px;margin:0 0 8px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{position:relative}
+.opt input{position:absolute;opacity:0;pointer-events:none}
+.opt span{display:block;padding:10px 14px;border:1.5px solid var(--line);border-radius:999px;background:#fff;font-size:15px;cursor:pointer;user-select:none}
+.opt input:checked+span{border-color:var(--accent);background:var(--accent-bg);color:var(--accent);font-weight:700}
+.opt input:focus-visible+span{outline:2px solid var(--accent);outline-offset:2px}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:15px}
+input[type=number],input[type=text],input[type=tel],textarea{font:inherit;font-size:16px;padding:10px 12px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--fg)}
+input[type=number]{width:110px}
+input[type=text],input[type=tel],textarea{width:100%}
+textarea{min-height:90px;resize:vertical}
+label.f{display:block;font-size:14px;color:var(--muted);margin:10px 0 4px}
+.species{margin-top:10px;display:none}
+.species.show{display:block}
+button{display:block;width:100%;margin-top:18px;padding:15px;border:0;border-radius:10px;background:var(--accent);color:#fff;font:inherit;font-size:17px;font-weight:700;cursor:pointer}
+button:disabled{opacity:.55;cursor:default}
+.msg{margin-top:10px;font-size:14px;min-height:1.4em}
+.msg.err{color:var(--err)}
+.done{text-align:center;padding:36px 16px}
+.done .big{font-size:20px;font-weight:700;color:var(--ok);margin-bottom:8px}
+footer{margin-top:28px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="to" id="to"></div>
+    <h1>桧フローリング 1820 エンドマッチ品<br>ご需要のお伺い</h1>
+    <p class="lead">わかる範囲で結構です。1分ほどで終わります。</p>
+  </header>
+
+  <div id="formArea">
+    <div class="card">
+      <h2>想定している品（長さはいずれも1820mm・エンドマッチ加工）</h2>
+      <ul class="prod">
+        <li>桧フローリング（突付）15 × 120（働き108）</li>
+        <li>桧フローリング（突付）12 × 120（働き108）</li>
+        <li>桧羽目板（目透し）12 × 120（働き103）</li>
+      </ul>
+      <p class="note">等級は無節・特上小・小節・丸節。設備の都合上、3m・4mへの加工は予定しておりません。</p>
+    </div>
+
+    <div class="card" id="nameCard" hidden>
+      <label class="f" for="company">貴社名</label>
+      <input type="text" id="company" autocomplete="organization">
+    </div>
+
+    <div class="card">
+      <p class="q">① 1820エンドマッチ品のご需要</p>
+      <div class="opts" data-name="need" data-type="radio">
+        <label class="opt"><input type="radio" name="need" value="今もある"><span>今もある</span></label>
+        <label class="opt"><input type="radio" name="need" value="今後ありそう"><span>今後ありそう</span></label>
+        <label class="opt"><input type="radio" name="need" value="ない"><span>ない</span></label>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q">② ご興味のある品（複数可）</p>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="items" value="フローリング（突付）15mm"><span>フローリング（突付）15mm</span></label>
+        <label class="opt"><input type="checkbox" name="items" value="フローリング（突付）12mm"><span>フローリング（突付）12mm</span></label>
+        <label class="opt"><input type="checkbox" name="items" value="羽目板（目透し）12mm"><span>羽目板（目透し）12mm</span></label>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q">③ ご興味のある等級（複数可）</p>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="grades" value="無節"><span>無節</span></label>
+        <label class="opt"><input type="checkbox" name="grades" value="特上小"><span>特上小</span></label>
+        <label class="opt"><input type="checkbox" name="grades" value="小節"><span>小節</span></label>
+        <label class="opt"><input type="checkbox" name="grades" value="丸節"><span>丸節</span></label>
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q">④ 見込みのご数量</p>
+      <div class="row">月におよそ <input type="number" id="tsubo" inputmode="decimal" min="0" placeholder="0"> 坪</div>
+      <div class="row" style="margin-top:8px">または <input type="number" id="taba" inputmode="decimal" min="0" placeholder="0"> 束</div>
+    </div>
+
+    <div class="card">
+      <p class="q">⑤ 現在のお取扱い</p>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="other" value="他社品を扱っている"><span>他社の1820エンドマッチ品を扱っている</span></label>
+        <label class="opt"><input type="radio" name="other" value="扱っていない"><span>扱っていない</span></label>
+      </div>
+      <div class="species" id="speciesBox">
+        <label class="f" for="species">樹種（わかれば）</label>
+        <input type="text" id="species" placeholder="例：杉・桧・パイン">
+      </div>
+    </div>
+
+    <div class="card">
+      <p class="q">⑥ ご意見・ご要望</p>
+      <textarea id="note" placeholder="梱包単位・塗装の有無など"></textarea>
+    </div>
+
+    <div class="card">
+      <label class="f" for="person" style="margin-top:0">ご担当者名（任意）</label>
+      <input type="text" id="person" autocomplete="name">
+      <label class="f" for="tel">お電話番号（任意）</label>
+      <input type="tel" id="tel" autocomplete="tel" inputmode="tel">
+      <button id="send" type="button">送信する</button>
+      <div class="msg" id="msg" role="status"></div>
+    </div>
+  </div>
+
+  <div class="card done hidden" id="doneArea">
+    <div class="big">ご回答ありがとうございました</div>
+    <div>内容は弊社に届きました。<br>今後のご案内の参考にさせていただきます。</div>
+  </div>
+
+  <footer>
+    株式会社 林材木店（静岡県磐田市）<br>
+    TEL 0538-58-2395　FAX 050-3146-7566<br>
+    info@hayazai.com
+  </footer>
+</div>
+
+<script>
+(function () {
+  var API = 'https://script.google.com/macros/s/AKfycbxQCf2HVfLjUAzOYXJHzzhquN3zkNrUAgcusg3mH5uhlm-UySsDYXBChhLjZGI2DyecIg/exec';
+  var t = (new URLSearchParams(location.search).get('t') || '').trim();
+  var $ = function (id) { return document.getElementById(id); };
+  var known = false;
+
+  function showNameInput() { $('nameCard').hidden = false; $('to').textContent = ''; }
+
+  // 会社名はGASの宛先シートで解決（ページに取引先一覧は持たない）
+  if (/^[A-Za-z0-9]{6,16}$/.test(t)) {
+    $('to').textContent = '読み込み中…';
+    fetch(API + '?action=em_name&t=' + encodeURIComponent(t))
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.ok && j.name) { known = true; $('to').textContent = j.name + '　御中'; }
+        else showNameInput();
+      })
+      .catch(showNameInput);
+  } else {
+    showNameInput();
+  }
+
+  document.querySelectorAll('input[name=other]').forEach(function (el) {
+    el.addEventListener('change', function () {
+      $('speciesBox').classList.toggle('show', el.value === '他社品を扱っている' && el.checked);
+    });
+  });
+
+  function val(name) { var e = document.querySelector('input[name=' + name + ']:checked'); return e ? e.value : ''; }
+  function vals(name) { return Array.prototype.map.call(document.querySelectorAll('input[name=' + name + ']:checked'), function (e) { return e.value; }); }
+
+  $('send').addEventListener('click', function () {
+    var msg = $('msg');
+    msg.className = 'msg';
+    if (!val('need')) { msg.className = 'msg err'; msg.textContent = '①のご需要をお選びください。'; return; }
+    if (!known && !$('company').value.trim()) { msg.className = 'msg err'; msg.textContent = '貴社名をご入力ください。'; return; }
+    var ans = {
+      need: val('need'), items: vals('items'), grades: vals('grades'),
+      tsubo: $('tsubo').value, taba: $('taba').value,
+      other: val('other'), species: $('species').value,
+      note: (!known ? '【貴社名】' + $('company').value.trim() + '\n' : '') + $('note').value,
+      person: $('person').value, tel: $('tel').value
+    };
+    var btn = $('send');
+    btn.disabled = true; btn.textContent = '送信中…';
+    // text/plain = プリフライトなし（GASはCORS preflightを受けられない）
+    fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ action: 'em_submit', t: known ? t : 'general1', ans: ans, ua: navigator.userAgent }) })
+      .then(function (r) { return r.json(); })
+      .then(function (j) {
+        if (j && j.ok) { $('formArea').classList.add('hidden'); $('doneArea').classList.remove('hidden'); window.scrollTo(0, 0); }
+        else throw new Error(j && j.error || 'error');
+      })
+      .catch(function () {
+        btn.disabled = false; btn.textContent = '送信する';
+        msg.className = 'msg err';
+        msg.textContent = '送信できませんでした。電波の良い所でもう一度お試しいただくか、FAX・お電話でお知らせください。';
+      });
+  });
+})();
+</script>
+</body>
+</html>
